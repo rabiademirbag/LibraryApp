@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* Sayfa gövdesinin genel stilleri */
+body {
+  margin: 0; /* Kenarlıkları sıfırla */
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; /* Yazı tipini ayarla */
+  -webkit-font-smoothing: antialiased; /* Webkit tarayıcılarında font yumuşatma */
+  -moz-osx-font-smoothing: grayscale; /* Firefox için font yumuşatma */
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* Arka plan için degrade renk geçişi */
+  min-height: 100vh; /* Sayfa yüksekliğini ekran boyutuna göre ayarla */
+  color: #333; /* Yazı rengini gri yap */
+  overflow-x: hidden; /* Yatay kaydırmayı gizle */
+}
+
+/* Ana sayfa stilleri */
+.home-container {
+  max-width: 1200px; /* Maksimum genişlik 1200px */
+  margin: 0 auto; /* Sayfayı ortala */
+  padding: 0 1rem; /* İçeride sağ ve sol boşluk bırak */
+}
+
+.hero-section {
+  display: flex; /* Flexbox ile düzenle */
+  align-items: center; /* Dikeyde ortala */
+  justify-content: space-between; /* Öğeleri yatayda aralarındaki boşluğu eşitle */
+  padding: 4rem 0; /* Üst ve alt boşlukları ekle */
+  gap: 2rem; /* Öğeler arasına boşluk bırak */
+}
+
+.hero-content {
+  flex: 1; /* İçeriği esnet */
+}
+
+.hero-image {
+  flex: 1; /* Görseli esnet */
+  display: flex; /* Flexbox ile düzenle */
+  justify-content: center; /* Görseli yatayda ortala */
+  align-items: center; /* Görseli dikeyde ortala */
+}
+
+.hero-image img {
+  max-width: 100%; /* Görselin genişliğini sınırlama */
+  height: auto; /* Yüksekliği oranla ayarla */
+  border-radius: 12px; /* Kenarları yuvarla */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Gölgeleme ekle */
+  animation: float 6s ease-in-out infinite; /* Yüzer animasyon */
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px); /* Başlangıçta normal konum */
+  }
+  50% {
+    transform: translateY(-10px); /* Orta noktada yukarı kaydır */
+  }
+  100% {
+    transform: translateY(0px); /* Sonraki noktada tekrar normal konuma dön */
+  }
+}
+
+.hero-title {
+  font-size: 3rem; /* Başlık boyutunu büyük yap */
+  font-weight: 700; /* Kalın yazı tipi */
+  margin-bottom: 1.5rem; /* Alt boşluk ekle */
+  color: #1a365d; /* Başlık rengini koyu mavi yap */
+  line-height: 1.2; /* Satır yüksekliğini ayarla */
+  animation: fadeIn 1s ease-in-out; /* FadeIn animasyonu ekle */
+}
+
+.hero-description {
+  font-size: 1.1rem; /* Açıklama metni boyutunu orta yap */
+  line-height: 1.6; /* Satır yüksekliğini arttır */
+  margin-bottom: 2rem; /* Alt boşluk ekle */
+  color: #4a5568; /* Açıklama rengini gri yap */
+  max-width: 90%; /* Maksimum genişlik */
+  animation: fadeIn 1s ease-in-out 0.3s both; /* FadeIn animasyonu ekle */
+}
+
+.hero-buttons {
+  display: flex; /* Flexbox ile düzenle */
+  gap: 1rem; /* Düğmeler arasında boşluk bırak */
+  margin-top: 2rem; /* Üst boşluk ekle */
+  animation: fadeIn 1s ease-in-out 0.6s both; /* FadeIn animasyonu ekle */
+}
+
+.primary-button {
+  display: inline-flex; /* Yalnızca satır içinde esnet */
+  align-items: center; /* İçeriklerin dikeyde ortalanması */
+  gap: 0.5rem; /* Düğme elemanları arasında boşluk bırak */
+  padding: 0.75rem 1.5rem; /* İçeriklere yatayda padding ekle */
+  background-color: #3182ce; /* Arka plan rengini mavi yap */
+  color: white; /* Yazı rengini beyaz yap */
+  font-weight: 600; /* Orta kalınlıkta yazı tipi */
+  border-radius: 0.5rem; /* Yuvarlak köşeler */
+  text-decoration: none; /* Alt çizgiyi kaldır */
+  transition: all 0.3s ease; /* Tüm geçişleri yumuşat */
+  border: none; /* Sınırları kaldır */
+  cursor: pointer; /* Fare imlecini işaretçi yap */
+  box-shadow: 0 4px 6px rgba(49, 130, 206, 0.25); /* Gölgeleme ekle */
+}
+
+.primary-button:hover {
+  background-color: #2b6cb0; /* Hover durumunda mavi tonu değiştir */
+  transform: translateY(-2px); /* Hover durumunda yukarı kaydır */
+  box-shadow: 0 7px 14px rgba(49, 130, 206, 0.3); /* Gölgeleme yoğunluğunu arttır */
+}
+
+.secondary-button {
+  display: inline-flex; /* Yalnızca satır içinde esnet */
+  align-items: center; /* İçeriklerin dikeyde ortalanması */
+  gap: 0.5rem; /* Düğme elemanları arasında boşluk bırak */
+  padding: 0.75rem 1.5rem; /* İçeriklere yatayda padding ekle */
+  background-color: white; /* Arka plan rengini beyaz yap */
+  color: #3182ce; /* Yazı rengini mavi yap */
+  font-weight: 600; /* Orta kalınlıkta yazı tipi */
+  border-radius: 0.5rem; /* Yuvarlak köşeler */
+  text-decoration: none; /* Alt çizgiyi kaldır */
+  transition: all 0.3s ease; /* Tüm geçişleri yumuşat */
+  border: 1px solid #e2e8f0; /* Sınır ekle */
+  cursor: pointer; /* Fare imlecini işaretçi yap */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Hafif gölgeleme ekle */
+}
+
+.secondary-button:hover {
+  background-color: #f7fafc; /* Hover durumunda arka plan rengini değiştir */
+  transform: translateY(-2px); /* Hover durumunda yukarı kaydır */
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1); /* Gölgeleme yoğunluğunu arttır */
+}
+
+/* Özellikler bölümü stilleri */
+.features-section {
+  padding: 4rem 0; /* Üst ve alt boşluk ekle */
+  background-color: white; /* Arka plan rengini beyaz yap */
+  border-radius: 20px; /* Yuvarlak köşeler */
+  margin: 2rem 0; /* Üst ve alt boşluk ekle */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Hafif gölgeleme ekle */
+  animation: fadeIn 1s ease-in-out 0.9s both; /* FadeIn animasyonu ekle */
+}
+
+.features-title {
+  text-align: center; /* Başlığı ortala */
+  font-size: 2.5rem; /* Başlık boyutunu büyük yap */
+  font-weight: 700; /* Kalın yazı tipi */
+  margin-bottom: 3rem; /* Alt boşluk ekle */
+  color: #2d3748; /* Başlık rengini koyu gri yap */
+}
+
+.features-grid {
+  display: grid; /* Grid düzeni ile öğeleri sıralama */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Sütunları otomatik olarak doldur */
+  gap: 2rem; /* Öğeler arasına boşluk bırak */
+  padding: 0 2rem; /* Sağ ve sol padding ekle */
+}
+
+.feature-card {
+  background-color: #f7fafc; /* Kart arka planını beyaz-sarı yap */
+  border-radius: 12px; /* Yuvarlak köşeler */
+  padding: 2rem; /* İçerideki padding */
+  transition: all 0.3s ease; /* Tüm geçişleri yumuşat */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Hafif gölgeleme ekle */
+  display: flex; /* Flexbox ile düzenle */
+  flex-direction: column; /* Dikey düzende içerik */
+  height: 100%; /* Yüksekliği tam yap */
+}
+
+.feature-card:hover {
+  transform: translateY(-5px); /* Hover durumunda yukarı kaydır */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Gölgeleme yoğunluğunu arttır */
+}
+
+.feature-icon {
+  display: inline-flex; /* Yalnızca satır içinde esnet */
+  align-items: center; /* İçeriği dikeyde ortala */
+  justify-content: center; /* İçeriği yatayda ortala */
+  width: 60px; /* Genişlik ayarla */
+  height: 60px; /* Yükseklik ayarla */
+  background-color: #ebf8ff; /* Hafif mavi arka plan */
+  color: #3182ce; /* Yazı rengini mavi yap */
+  border-radius: 12px; /* Yuvarlak köşeler */
+  margin-bottom: 1.5rem; /* Alt boşluk bırak */
+}
+
+.feature-card h3 {
+  font-size: 1.25rem; /* Başlık boyutunu orta yap */
+  font-weight: 600; /* Orta kalınlıkta yazı tipi */
+  margin-bottom: 1rem; /* Alt boşluk bırak */
+  color: #2d3748; /* Başlık rengini koyu gri yap */
+}
+
+.feature-card p {
+  color: #4a5568; /* Açıklama rengini gri yap */
+  margin-bottom: 1.5rem; /* Alt boşluk bırak */
+  line-height: 1.6; /* Satır yüksekliğini ayarla */
+  flex-grow: 1; /* İçeriğin büyümesine izin ver */
+}
+
+.feature-link {
+  display: inline-flex; /* Yalnızca satır içinde esnet */
+  align-items: center; /* İçeriği dikeyde ortala */
+  gap: 0.25rem; /* Elemanlar arasına boşluk bırak */
+  color: #3182ce; /* Yazı rengini mavi yap */
+  font-weight: 500; /* Orta kalınlıkta yazı tipi */
+  text-decoration: none; /* Alt çizgiyi kaldır */
+  transition: all 0.2s ease; /* Tüm geçişleri yumuşat */
+  margin-top: auto; /* Yukarıdan boşluk bırak */
+}
+
+.feature-link:hover {
+  color: #2b6cb0; /* Hover durumunda renk değiştir */
+  gap: 0.5rem; /* Hover durumunda boşluğu arttır */
+}
+
+.feature-card-cta {
+  background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%); /* Gradyan arka plan */
+  color: white; /* Yazı rengini beyaz yap */
+  height: 100%; /* Yüksekliği tam yap */
+  border-radius: 12px; /* Yuvarlak köşeler */
+  padding: 2rem; /* İç padding */
+  display: flex; /* Flexbox düzeni */
+  flex-direction: column; /* Dikey düzende içerik */
+  justify-content: center; /* İçeriği ortala */
+}
+
+.feature-card-cta h3 {
+  color: white; /* Başlık rengini beyaz yap */
+  font-size: 1.5rem; /* Başlık boyutunu büyük yap */
+  margin-bottom: 1rem; /* Alt boşluk bırak */
+}
+
+.feature-card-cta p {
+  color: rgba(255, 255, 255, 0.9); /* Hafif şeffaf beyaz renk */
+  margin-bottom: 1.5rem; /* Alt boşluk bırak */
+}
+
+.feature-card-cta .primary-button {
+  background-color: white; /* Arka plan rengini beyaz yap */
+  color: #3182ce; /* Yazı rengini mavi yap */
+  align-self: flex-start; /* Sol tarafa hizala */
+}
+
+.feature-card-cta .primary-button:hover {
+  background-color: #f7fafc; /* Hover durumunda beyaz rengi değiştir */
+}
+
+/* Footer stilleri */
+.home-footer {
+  text-align: center; /* Yazıyı ortala */
+  padding: 2rem 0; /* Üst ve alt padding ekle */
+  background-color: #2d3748; /* Koyu gri arka plan */
+  color: white; /* Yazı rengini beyaz yap */
+}
+
+.home-footer p {
+  margin: 0; /* Kenar boşluğunu sıfırla */
+  font-size: 1rem; /* Yazı boyutunu ayarla */
+}
+
+

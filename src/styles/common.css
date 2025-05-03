@@ -1,0 +1,500 @@
+/* Ana konteyner stil tanımları */
+.container {
+  /* Genişlik ayarı - %100 ekran genişliği */
+  width: 100%;
+  /* Maksimum genişlik sınırı */
+  max-width: 1200px;
+  /* Otomatik yatay hizalama (ortala) */
+  margin: 0 auto;
+  /* İç boşluk ayarı */
+  padding: 1.5rem;
+  /* Arka plan rengi - beyaz */
+  background-color: #ffffff;
+  /* Köşe yuvarlatma */
+  border-radius: 0.5rem;
+  /* Kutu gölgesi efekti */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Başlık alanı stil tanımları */
+.header {
+  /* Flexbox düzeni */
+  display: flex;
+  /* Elemanları yatayda eşit dağıt */
+  justify-content: space-between;
+  /* Dikeyde ortala */
+  align-items: center;
+  /* Alt boşluk ayarı */
+  margin-bottom: 1.5rem;
+  /* Alt kenar çizgisi */
+  border-bottom: 2px solid #e5e7eb;
+  /* İç boşluk (sadece alt kısım) */
+  padding-bottom: 1rem;
+}
+
+/* Başlık metni stil tanımları */
+.title {
+  /* Yazı boyutu */
+  font-size: 1.75rem;
+  /* Yazı kalınlığı */
+  font-weight: 700;
+  /* Yazı rengi */
+  color: #1f2937;
+  /* Kenar boşluğu sıfırlama */
+  margin: 0;
+}
+
+/* Yeni buton stil tanımları */
+.new-button {
+  /* Arka plan rengi - mavi */
+  background-color: #3b82f6;
+  /* Yazı rengi - beyaz */
+  color: white;
+  /* Kenarlık yok */
+  border: none;
+  /* Köşe yuvarlatma */
+  border-radius: 0.375rem;
+  /* İç boşluk ayarı */
+  padding: 0.75rem 1.5rem;
+  /* Yazı kalınlığı */
+  font-weight: 600;
+  /* İmleç tipi - tıklanabilir */
+  cursor: pointer;
+  /* Geçiş efekti tanımları */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Yeni buton hover (üzerine gelme) efekti */
+.new-button:hover {
+  /* Koyu mavi arka plan */
+  background-color: #2563eb;
+  /* Hafif yukarı hareket */
+  transform: translateY(-2px);
+}
+
+/* Yeni buton devre dışı durum stili */
+.new-button:disabled {
+  /* Açık mavi arka plan */
+  background-color: #93c5fd;
+  /* İmleç tipi - tıklanamaz */
+  cursor: not-allowed;
+}
+
+/* Form sarmalayıcı stil tanımları */
+.form-wrapper {
+  /* Açık gri arka plan */
+  background-color: #f9fafb;
+  /* Köşe yuvarlatma */
+  border-radius: 0.5rem;
+  /* İç boşluk ayarı */
+  padding: 2rem;
+  /* Alt boşluk ayarı */
+  margin-bottom: 2rem;
+  /* Hafif gölge efekti */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form alt başlık stil tanımları */
+.form-subtitle {
+  /* Yazı boyutu */
+  font-size: 1.5rem;
+  /* Yazı kalınlığı */
+  font-weight: 600;
+  /* Yazı rengi */
+  color: #374151;
+  /* Kenar boşluk ayarı */
+  margin: 0 0 1rem 0;
+}
+
+/* Form ana stil tanımları */
+.form {
+  /* Genişlik ayarı */
+  width: 100%;
+}
+
+/* Form grid düzeni stil tanımları */
+.form-grid {
+  /* Grid düzeni */
+  display: grid;
+  /* Responsive grid kolonları */
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  /* Elemanlar arası boşluk */
+  gap: 1rem;
+  /* Alt boşluk ayarı */
+  margin-bottom: 1.5rem;
+}
+
+/* Girdi grubu stil tanımları */
+.input-group {
+  /* Alt boşluk ayarı */
+  margin-bottom: 1.5rem;
+}
+
+/* Girdi etiketi stil tanımları */
+.input-label {
+  /* Blok seviyesi element */
+  display: block;
+  /* Yazı kalınlığı */
+  font-weight: 600;
+  /* Alt boşluk ayarı */
+  margin-bottom: 0.5rem;
+  /* Yazı rengi */
+  color: #374151;
+}
+
+/* Girdi alanı stil tanımları */
+.input-field {
+  /* Genişlik ayarı */
+  width: 100%;
+  /* İç boşluk ayarı */
+  padding: 0.75rem;
+  /* Kenarlık ayarı */
+  border: 1px solid #d1d5db;
+  /* Köşe yuvarlatma */
+  border-radius: 0.375rem;
+  /* Arka plan rengi */
+  background-color: white;
+  /* Geçiş efekti tanımları */
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Girdi alanı odaklanma efekti */
+.input-field:focus {
+  /* Mavi kenarlık */
+  border-color: #3b82f6;
+  /* Varsayılan dış çizgiyi kaldır */
+  outline: none;
+  /* Hafif mavi gölge efekti */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Girdi alanı devre dışı durum stili */
+.input-field:disabled {
+  /* Açık gri arka plan */
+  background-color: #f3f4f6;
+  /* İmleç tipi - tıklanamaz */
+  cursor: not-allowed;
+}
+
+/* İpucu metni stil tanımları */
+.hint-text {
+  /* Blok seviyesi element */
+  display: block;
+  /* Küçük yazı boyutu */
+  font-size: 0.875rem;
+  /* Gri yazı rengi */
+  color: #6b7280;
+  /* Üst boşluk ayarı */
+  margin-top: 0.25rem;
+}
+
+/* Gönder butonu stil tanımları */
+.submit-button {
+  /* Yeşil arka plan */
+  background-color: #10b981;
+  /* Beyaz yazı rengi */
+  color: white;
+  /* Kenarlık yok */
+  border: none;
+  /* Köşe yuvarlatma */
+  border-radius: 0.375rem;
+  /* İç boşluk ayarı */
+  padding: 0.625rem 1.25rem;
+  /* Yazı kalınlığı */
+  font-weight: 600;
+  /* İmleç tipi - tıklanabilir */
+  cursor: pointer;
+  /* Geçiş efektleri */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  /* Blok seviyesi element */
+  display: block;
+  /* Genişlik ayarı */
+  width: 100%;
+  /* Maksimum genişlik sınırı */
+  max-width: 220px;
+  /* Otomatik yatay hizalama (ortala) */
+  margin: 0 auto;
+}
+
+/* Gönder butonu hover efekti */
+.submit-button:hover {
+  /* Koyu yeşil arka plan */
+  background-color: #059669;
+  /* Hafif yukarı hareket */
+  transform: translateY(-2px);
+}
+
+/* Gönder butonu devre dışı durum stili */
+.submit-button:disabled {
+  /* Açık yeşil arka plan */
+  background-color: #a7f3d0;
+  /* İmleç tipi - tıklanamaz */
+  cursor: not-allowed;
+}
+
+/* Tablo sarmalayıcı stil tanımları */
+.table-container {
+  /* Yatay kaydırma desteği */
+  overflow-x: auto;
+  /* Alt boşluk ayarı */
+  margin-bottom: 1.5rem;
+}
+
+/* Tablo ana stil tanımları */
+.table {
+  /* Genişlik ayarı */
+  width: 100%;
+  /* Kenarlık birleştirme */
+  border-collapse: collapse;
+  /* Yazı boyutu */
+  font-size: 0.875rem;
+}
+
+/* Tablo başlık ve hücre ortak stil tanımları */
+.table th,
+.table td {
+  /* İç boşluk ayarı */
+  padding: 1rem;
+  /* Yazı hizalama - sola */
+  text-align: left;
+  /* Alt kenarlık çizgisi */
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Tablo 1. sütun genişlik ayarı */
+.table th:nth-child(1),
+.table td:nth-child(1) {
+  width: 25%;
+}
+
+/* Tablo 2. sütun genişlik ayarı */
+.table th:nth-child(2),
+.table td:nth-child(2) {
+  width: 25%;
+}
+
+/* Tablo 3. sütun genişlik ayarı */
+.table th:nth-child(3),
+.table td:nth-child(3) {
+  width: 25%;
+}
+
+/* Tablo 4. sütun genişlik ayarı */
+.table th:nth-child(4),
+.table td:nth-child(4) {
+  width: 25%;
+}
+
+/* Tablo başlık hücre stil tanımları */
+.table th {
+  /* Açık gri arka plan */
+  background-color: #f9fafb;
+  /* Yazı kalınlığı */
+  font-weight: 600;
+  /* Yazı rengi */
+  color: #4b5563;
+}
+
+/* Tablo satır hover efekti */
+.table tr:hover {
+  /* Açık mavi arka plan */
+  background-color: #e5f3ff;
+}
+
+/* Silme butonu stil tanımları */
+.delete-button {
+  /* Kırmızı arka plan */
+  background-color: #ef4444;
+  /* Beyaz yazı rengi */
+  color: white;
+  /* Kenarlık yok */
+  border: none;
+  /* Köşe yuvarlatma */
+  border-radius: 0.25rem;
+  /* İç boşluk ayarı */
+  padding: 0.5rem 0.75rem;
+  /* Yazı boyutu */
+  font-size: 0.875rem;
+  /* İmleç tipi - tıklanabilir */
+  cursor: pointer;
+  /* Geçiş efekti */
+  transition: background-color 0.3s ease;
+}
+
+/* Silme butonu hover efekti */
+.delete-button:hover {
+  /* Koyu kırmızı arka plan */
+  background-color: #dc2626;
+}
+
+/* Silme butonu devre dışı durum stili */
+.delete-button:disabled {
+  /* Açık kırmızı arka plan */
+  background-color: #fca5a5;
+  /* İmleç tipi - tıklanamaz */
+  cursor: not-allowed;
+}
+
+/* Buton grubu stil tanımları */
+.button-group {
+  /* Flexbox düzeni */
+  display: flex;
+  /* Elemanlar arası boşluk */
+  gap: 0.5rem;
+}
+
+/* Kategoriler konteyner stil tanımları */
+.categories-container {
+  /* Maksimum yükseklik sınırı */
+  max-height: 200px;
+  /* Dikey kaydırma desteği */
+  overflow-y: auto;
+  /* Kenarlık ayarı */
+  border: 1px solid #e2e8f0;
+  /* Köşe yuvarlatma */
+  border-radius: 8px;
+  /* İç boşluk ayarı */
+  padding: 10px;
+  /* Arka plan rengi */
+  background-color: #f8fafc;
+  /* Üst boşluk ayarı */
+  margin-top: 8px;
+}
+
+/* Kategori checkbox stil tanımları */
+.category-checkbox {
+  /* Flexbox düzeni */
+  display: flex;
+  /* Dikeyde ortala */
+  align-items: center;
+  /* İç boşluk ayarı */
+  padding: 6px 8px;
+  /* Köşe yuvarlatma */
+  border-radius: 4px;
+  /* İmleç tipi - tıklanabilir */
+  cursor: pointer;
+  /* Geçiş efekti */
+  transition: background-color 0.2s;
+}
+
+/* Kategori checkbox hover efekti */
+.category-checkbox:hover {
+  /* Açık gri arka plan */
+  background-color: #edf2f7;
+}
+
+/* Kategori checkbox input alanı stil tanımları */
+.category-checkbox input {
+  /* Sağ boşluk ayarı */
+  margin-right: 8px;
+}
+
+/* Kategori adı stil tanımları */
+.category-name {
+  /* Yazı boyutu */
+  font-size: 14px;
+}
+
+/* Kategori arama alanı stil tanımları */
+.category-search {
+  /* Alt boşluk ayarı */
+  margin-bottom: 8px;
+}
+
+/* Kategori sayısı stil tanımları */
+.category-count {
+  /* Küçük yazı boyutu */
+  font-size: 12px;
+  /* Gri yazı rengi */
+  color: #718096;
+  /* Normal yazı kalınlığı */
+  font-weight: normal;
+  /* Sol boşluk ayarı */
+  margin-left: 8px;
+}
+
+/* Kategori etiketleri konteyner stil tanımları */
+.category-tags {
+  /* Flexbox düzeni */
+  display: flex;
+  /* Çok satırlı flex desteği */
+  flex-wrap: wrap;
+  /* Elemanlar arası boşluk */
+  gap: 6px;
+}
+
+/* Kategori etiketi stil tanımları */
+.category-tag {
+  /* Açık gri arka plan */
+  background-color: #edf2f7;
+  /* Gri yazı rengi */
+  color: #4a5568;
+  /* İç boşluk ayarı */
+  padding: 4px 8px;
+  /* Köşe yuvarlatma */
+  border-radius: 16px;
+  /* Yazı boyutu */
+  font-size: 12px;
+  /* Yazı kalınlığı */
+  font-weight: 500;
+}
+/* Modal arka planı için overlay stil tanımları */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Üstten hizalama yapıyoruz */
+  z-index: 1000;
+  overflow-y: auto; /* Dikey kaydırmayı etkinleştir */
+  padding: 20px 0; /* Üstten ve alttan boşluk ekle */
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 90%; /* Genişliği artırıyoruz */
+  max-width: 800px; /* Maksimum genişlik belirliyoruz */
+  margin: 20px 0; /* Üst ve alttan boşluk */
+  max-height: 90vh; /* Maksimum yükseklik viewport'un %90'ı */
+  overflow-y: auto; /* İçerik fazlaysa kaydırma çubuğu göster */
+}
+
+.modal-content {
+  margin-bottom: 20px;
+  max-height: calc(90vh - 100px); /* Modal başlık ve butonlar için alan bırak */
+  overflow-y: auto; /* İçerik fazlaysa kaydırma çubuğu göster */
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  position: sticky; /* Butonlar alt kısımda sabit kalsın */
+  bottom: 0;
+  background: white; /* Arkaplan rengi */
+  padding-top: 10px; /* Üstten boşluk */
+}
+
+/* Form elemanları için düzenlemeler */
+.modal .form-grid {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 15px;
+}
+
+
+/* Kategori seçim kutusu için özel düzenleme */
+.modal .categories-container {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #eee;
+  padding: 10px;
+  border-radius: 4px;
+}
