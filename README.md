@@ -1,15 +1,12 @@
 
-
-
-
-
-
-
 # Kütüphane Yönetim Sistemi
 
 Bu proje, kitapların, yazarların, kategorilerin, yayınevlerinin ve ödünç alma işlemlerinin yönetimini sağlayan kapsamlı bir kütüphane yönetim sistemidir. Modern ve kullanıcı dostu bir arayüz ile kütüphane kaynaklarınızı verimli bir şekilde yönetmenize olanak tanır.
 
+# Canlı Proje Linki
 
+- [Library App](https://llibraryappp.netlify.app/)
+  
 ## Özellikler
 
 - **Kitap Yönetimi**: Kitapları ekleyin, düzenleyin, silin ve detaylı bilgilerini görüntüleyin.
