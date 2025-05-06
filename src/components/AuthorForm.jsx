@@ -12,7 +12,6 @@ import '../styles/common.css'; // Ortak stiller
 // AuthorForm bileşeninin tanımı
 export default function AuthorForm() {
   const [loading, setLoading] = useState(true);
-
   // Yazar adı için state
   const [authorName, setAuthorName] = useState("");
   // Doğum tarihi için state
@@ -167,7 +166,7 @@ export default function AuthorForm() {
     // Sayfanın ana kapsayıcısı
     <div className="container">
       {loading ? (
-      <p className="loading-text">Loading...</p> // İstersen CSS ile stil verebilirsin
+      <p>Loading...</p>
     ) : (
       <>
       

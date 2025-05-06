@@ -9,6 +9,7 @@ import "../styles/common.css"
 
 // Kategori yönetimi için ana bileşeni tanımlıyoruz
 export default function CategoryForm() {
+  const [loading, setLoading] = useState(true);
   // Kategori adı için state tanımlıyoruz
   const [categoryName, setCategoryName] = useState("")
   // Kategori açıklaması için state tanımlıyoruz
@@ -33,6 +34,7 @@ export default function CategoryForm() {
 
   // Kategorileri yükleyen fonksiyon
   const loadCategories = async () => {
+    setLoading(true);
     try {
       // Kategori servisinden verileri alıyoruz
       const res = await getCategories()
@@ -43,6 +45,8 @@ export default function CategoryForm() {
       toast.error("Kategoriler yüklenemedi!")
       // Hatayı konsola yazdırıyoruz
       console.log(error)
+    }finally{
+      setLoading(false);
     }
   }
 
@@ -166,7 +170,12 @@ export default function CategoryForm() {
 
   // Bileşenin görünümünü oluşturuyoruz
   return (
-    <div className="container">
+        // Sayfanın ana kapsayıcısı
+        <div className="container">
+        {loading ? (
+        <p>Loading...</p> 
+      ) : (
+        <>
       <div className="header">
         <h2 className="title">Kategoriler</h2>
         <button
@@ -304,7 +313,9 @@ export default function CategoryForm() {
             </div>
           </div>
         </div>
-      )}
+               )}
+               </>
+             )}
     </div>
   )
 }

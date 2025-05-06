@@ -9,6 +9,7 @@ import "../styles/common.css"
 
 // Yayımcı yönetimi için ana bileşeni tanımlıyoruz
 export default function PublisherForm() {
+  const[loading,setLoading]=useState(true);
   // Yayımcılar listesi için state tanımlıyoruz
   const [publishers, setPublishers] = useState([])
   // Yayımcı adı için state tanımlıyoruz
@@ -35,6 +36,7 @@ export default function PublisherForm() {
 
   // Yayımcıları yükleyen fonksiyon
   const loadPublishers = async () => {
+    setLoading(true);
     try {
       // Yayımcı servisinden verileri alıyoruz
       const res = await getPublishers()
@@ -45,6 +47,8 @@ export default function PublisherForm() {
       console.log(error)
       // Hata durumunda bildirim gösteriyoruz
       toast.error("Yayımcılar yüklenemedi!")
+    }finally{
+      setLoading(false);
     }
   }
 
@@ -164,7 +168,12 @@ export default function PublisherForm() {
 
   // Bileşenin görünümünü oluşturuyoruz
   return (
-    <div className="container">
+      // Sayfanın ana kapsayıcısı
+      <div className="container">
+      {loading ? (
+        <p>Loading...</p> 
+      ) : (
+        <>
       <div className="header">
         <h2 className="title">Yayımcılar</h2>
         <button
@@ -323,6 +332,8 @@ export default function PublisherForm() {
             </div>
           </div>
         </div>
+      )}
+      </>
       )}
     </div>
   )

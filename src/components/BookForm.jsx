@@ -157,7 +157,7 @@ export default function BookForm() { // BookForm bileşenini tanımla
 
     <div className="container">
       {isLoading ? (
-      <p className="loading-text">Loading...</p> // İstersen CSS ile stil verebilirsin
+      <p>Loading...</p> 
     ) : (
       <>
       {/* Başlık ve yeni kitap ekleme butonu */}

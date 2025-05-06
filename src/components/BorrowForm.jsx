@@ -20,7 +20,7 @@ export default function BorrowForm() {
   const [borrows, setBorrows] = useState([]); // Ödünç alma kayıtları listesi
   const [books, setBooks] = useState([]); // Mevcut kitaplar listesi
   const [showForm, setShowForm] = useState(false); // Formun görünürlüğünü kontrol etmek için durum
-  const [loading, setLoading] = useState(false); // Yükleniyor durumu
+  const [loading, setLoading] = useState(true);
   const [editingBorrowId, setEditingBorrowId] = useState(null); // Düzenlenmekte olan ödünç alma kaydının ID'si
   const [showDeleteModal, setShowDeleteModal] = useState(false); // Silme modal'ının görünürlüğü
   const [borrowToDelete, setBorrowToDelete] = useState(null); // Silinecek ödünç alma kaydının ID'si
@@ -224,6 +224,10 @@ export default function BorrowForm() {
 
   return (
     <div className="container">
+      {loading ? (
+      <p>Loading...</p> 
+    ) : (
+      <>
       {/* Başlık ve Yeni Ödünç Alım Butonu */}
       <div className="header">
         <h2 className="title">Ödünç Alma Kayıtları</h2>
@@ -233,7 +237,6 @@ export default function BorrowForm() {
             resetForm();  // Formu sıfırlamak için
             setShowForm(!showForm);  // Formun görünürlüğünü değiştirmek için
           }} 
-          disabled={loading}  // Yükleme durumu aktifken butonun devre dışı bırakılması
         >
           {showForm ? "Formu Kapat" : "Yeni Ödünç Alım"}  {/* Buton metni form durumuna göre değişir */}
         </button>
@@ -483,7 +486,9 @@ export default function BorrowForm() {
             </div>
           </div>
         </div>
-      )}
+         )}
+            </>
+          )}
     </div>
   );
 };  
