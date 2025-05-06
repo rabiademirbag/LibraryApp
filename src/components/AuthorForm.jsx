@@ -11,6 +11,8 @@ import '../styles/common.css'; // Ortak stiller
 
 // AuthorForm bileşeninin tanımı
 export default function AuthorForm() {
+  const [loading, setLoading] = useState(true);
+
   // Yazar adı için state
   const [authorName, setAuthorName] = useState("");
   // Doğum tarihi için state
@@ -37,12 +39,17 @@ export default function AuthorForm() {
 
   // Yazarları API'den çeken fonksiyon
   const loadAuthors = async () => {
+    setLoading(true); // Yükleme başlıyor
     try {
       const res = await getAuthors(); // API'den veriyi çek
       setAuthors(res.data); // State'e yaz
     } catch (error) {
       toast.error("Yazarlar yüklenemedi!"); // Hata bildirimi
       console.error("Yazar Yükleme Hatası:", error.response?.data || error.message);
+    }
+    finally{
+      setLoading(false); // Yükleme tamamlandı
+
     }
   };
 
@@ -159,6 +166,10 @@ export default function AuthorForm() {
   return (
     // Sayfanın ana kapsayıcısı
     <div className="container">
+      {loading ? (
+      <p className="loading-text">Loading...</p> // İstersen CSS ile stil verebilirsin
+    ) : (
+      <>
       
       {/* Başlık ve formu aç/kapat butonu */}
       <div className="header">
@@ -345,6 +356,9 @@ export default function AuthorForm() {
             </div>
           </div>
         </div>
+        
+      )}
+      </>
       )}
     </div>
   );  
