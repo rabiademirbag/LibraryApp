@@ -28,25 +28,25 @@ Bu proje, kitapların, yazarların, kategorilerin, yayınevlerinin ve ödünç a
 ## Proje Görselleri 
 
 ### Ana Sayfa
-![Ana Sayfa](./images/ss1.png)
+![Ana Sayfa](./public/images/ss1.png)
 
 ### Yayımcılar
-![Yayımcılar](./images/ss2.png)
+![Yayımcılar](./public/images/ss2.png)
 
 ### Yayımcı Güncelleme
-![Güncelleme](./images/ss3.png)
+![Güncelleme](./public/images/ss3.png)
 
 ### Kategoriler
-![Kategoriler](./images/ss4.png)
+![Kategoriler](./public/images/ss4.png)
 
 ### Yazarlar
-![Yazarlar](./images/ss5.png)
+![Yazarlar](./public/images/ss5.png)
 
 ### Kitaplar
-![Kitaplar](./images/ss6.png)
+![Kitaplar](./public/images/ss6.png)
 
 ### Yeni Kitap Ekleme Formu
-![Yeni Kitap Ekleme Formu](./images/ss7.png)
+![Yeni Kitap Ekleme Formu](./public/images/ss7.png)
 
 ### Kitap Ödünç Alma
-![Kitap Ödünç Alma](./images/ss8.png)
+![Kitap Ödünç Alma](./public/images/ss8.png)
