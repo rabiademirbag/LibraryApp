@@ -7,6 +7,7 @@ import { toast } from "react-toastify"; // Kullanıcıya bildirim göstermek iç
 import "../styles/common.css"; // Ortak stilleri içeren CSS dosyasını içe aktar
 
 export default function BookForm() { // BookForm bileşenini tanımla
+  const [isLoading, setIsLoading] = useState(true); // Yüklenme durumu
   const [books, setBooks] = useState([]); // Kitaplar için state
   const [name, setName] = useState(""); // Kitap adı için state
   const [publicationYear, setPublicationYear] = useState(""); // Yayın yılı için state
@@ -30,12 +31,16 @@ export default function BookForm() { // BookForm bileşenini tanımla
   }, []); // Boş bağımlılık dizisi, sadece bir kez çalışır
 
   const loadBooks = async () => { // Kitapları yükleyen fonksiyon
+    setIsLoading(true); // Yükleme başladığında true yap
     try {
       const res = await getBooks(); // Kitapları al
       setBooks(res.data); // State'e ata
     } catch (error) {
       console.log(error); // Hata konsola yazdırılır
       toast.error("Kitaplar yüklenemedi."); // Hata bildirimi göster
+    }
+    finally {
+      setIsLoading(false); // Yükleme tamamlandığında false yap
     }
   };
 
@@ -149,6 +154,9 @@ export default function BookForm() { // BookForm bileşenini tanımla
   const selectedCategoriesCount = categoryIds.length; // Seçili kategori sayısını hesapla
 
   return (
+    isLoading ? (
+      <div className="loading">loading...</div>
+    ) : (
     // Ana kapsayıcı div
     <div className="container">
   
@@ -491,5 +499,7 @@ export default function BookForm() { // BookForm bileşenini tanımla
         </table>
       </div>
     </div>
-  );
+    )
+);
+
 }
