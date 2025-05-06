@@ -154,12 +154,12 @@ export default function BookForm() { // BookForm bileşenini tanımla
   const selectedCategoriesCount = categoryIds.length; // Seçili kategori sayısını hesapla
 
   return (
-    isLoading ? (
-      <div className="loading">loading...</div>
-    ) : (
-    // Ana kapsayıcı div
+
     <div className="container">
-  
+      {isLoading ? (
+      <p className="loading-text">Loading...</p> // İstersen CSS ile stil verebilirsin
+    ) : (
+      <>
       {/* Başlık ve yeni kitap ekleme butonu */}
       <div className="header">
         <h2 className="title">Kitaplar</h2>
@@ -498,8 +498,9 @@ export default function BookForm() { // BookForm bileşenini tanımla
           </tbody>
         </table>
       </div>
+      </>
+        )}
     </div>
-    )
+      
 );
-
 }
